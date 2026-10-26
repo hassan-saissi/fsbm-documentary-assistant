@@ -1,0 +1,16 @@
+# Framework API & Backend
+fastapi==0.110.0
+uvicorn==0.28.0
+pydantic==2.6.4
+
+# Orchestration RAG & LLM
+langchain==0.1.12
+langchain-community==0.0.28
+chromadb==0.4.24
+
+# Traitement des documents (PDF, etc.)
+pypdf==4.1.0
+
+# Utilitaires (Variables d'environnement, requêtes)
+python-dotenv==1.0.1
+requests==2.31.0
