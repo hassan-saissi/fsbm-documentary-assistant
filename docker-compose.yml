@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  fsbm-assistant:
+    build: .
+    container_name: fsbm-documentary-assistant
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./vector_db:/app/vector_db
+    environment:
+      # Permet à l'application dans le conteneur de parler à Ollama installé sur votre PC hôte
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
